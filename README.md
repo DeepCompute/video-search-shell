@@ -17,6 +17,8 @@
 
 ./zookeeper.sh status ips
 
+`注意`：有些服务器会出现“Error contacting service. It is probably not running.”错误，但是zookeeper已经正确运行。
+
 **4、重启**
 
 ./zookeeper.sh restart ips
