@@ -39,7 +39,7 @@ install() {
 start() {
     MASTER=`cat master`;
     echo $MASTER": start master ...";
-    ssh $MASTER "cd solr-cloud/solr-"$SOLR_VERSION";java -Xms1024M -Xmx2048M -Dbootstrap_confdir=./solr/videos/conf -Dcollection.configName=hubing -DnumShards=3 -DzkHost=192.168.3.21:2181,192.168.3.22:2181,192.168.3.23:2181 -jar start.jar &" &
+    ssh $MASTER "cd solr-cloud/solr-"$SOLR_VERSION";java -Xms1024M -Xmx2048M -Dbootstrap_confdir=./solr/videos/conf -Dcollection.configName=hubing -DnumShards=4 -DzkHost=192.168.32.17:2181,192.168.32.18:2181,192.168.32.19:2181,192.168.32.20:2181 -jar start.jar &" &
     echo "sleeping ..."
 
     for ((i=60;i>0;i--))
@@ -50,7 +50,7 @@ start() {
     for i in `cat slaves`;
     do
         echo $i": start slave ...";
-        ssh $i "cd solr-cloud/solr-"$SOLR_VERSION";java -Xms1024M -Xmx2048M -DzkHost=192.168.3.21:2181,192.168.3.22:2181,192.168.3.23:2181 -jar start.jar &" &
+        ssh $i "cd solr-cloud/solr-"$SOLR_VERSION";java -Xms1024M -Xmx2048M -DzkHost=192.168.32.17:2181,192.168.32.18:2181,192.168.32.19:2181,192.168.32.20:2181 -jar start.jar &" &
     done;
 }
 
