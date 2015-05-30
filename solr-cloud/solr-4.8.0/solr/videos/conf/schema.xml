@@ -181,6 +181,7 @@
    <field name="frame_content" type="text_zh" indexed="true" stored="true" multiValued="false" />
    <field name="frame_index" type="tint" indexed="true" stored="true" multiValued="true"/>
    <field name="frame_cache_ip" type="string" indexed="true" stored="true" multiValued="false" />
+   <field name="frame_url" type="string" indexed="false" stored="true" multiValued="false" />
    <field name="video_time_start" type="date" indexed="true" stored="true" multiValued="false" />
    <field name="video_time_end" type="date" indexed="true" stored="true" multiValued="false" />
    <field name="video_time_duration" type="int" indexed="true" stored="true" multiValued="false" />
@@ -315,6 +316,7 @@
 
    <!-- hubing-videos -->
    <copyField source="frame_content" dest="text"/>
+   <copyField source="road_name" dest="text"/>
 	
    <!-- Above, multiple source fields are copied to the [text] field. 
 	  Another way to map multiple source fields to the same 
