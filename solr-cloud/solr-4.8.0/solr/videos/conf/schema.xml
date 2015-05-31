@@ -182,16 +182,19 @@
    <field name="frame_index" type="tint" indexed="true" stored="true" multiValued="true"/>
    <field name="frame_cache_ip" type="string" indexed="true" stored="true" multiValued="false" />
    <field name="frame_url" type="string" indexed="false" stored="true" multiValued="false" />
+   <field name="video_id" type="string" indexed="true" stored="true" multiValued="false"/>
+   <field name="video_type" type="string" indexed="flase" stored="true" multiValued="false"/>
    <field name="video_time_start" type="date" indexed="true" stored="true" multiValued="false" />
    <field name="video_time_end" type="date" indexed="true" stored="true" multiValued="false" />
    <field name="video_time_duration" type="int" indexed="true" stored="true" multiValued="false" />
    <field name="video_ip" type="string" indexed="true" stored="true" multiValued="false"/>
    <field name="video_dir" type="string" indexed="false" stored="true" multiValued="false" />
-   <field name="video_name" type="text_zh" indexed="true" stored="true" multiValued="false" />
+   <field name="video_name" type="string" indexed="flase" stored="true" multiValued="false" />
    <field name="road_id" type="string" indexed="true" stored="true" multiValued="false" />
    <field name="road_name" type="text_zh" indexed="true" stored="true" multiValued="false" />
    <field name="road_name_start" type="text_zh" indexed="true" stored="true" multiValued="false" />
    <field name="road_name_end" type="text_zh" indexed="true" stored="true" multiValued="false" />
+   <field name="road_type" type="int" indexed="true" stored="true" multiValued="false" />
    <field name="longitude" type="double" indexed="true" stored="true" multiValued="false" />
    <field name="latitude" type="double" indexed="true" stored="true" multiValued="false" />
    <field name="timestamp" type="date" indexed="true" stored="true" multiValued="false" />
