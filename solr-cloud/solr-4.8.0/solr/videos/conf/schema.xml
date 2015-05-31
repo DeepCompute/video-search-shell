@@ -179,7 +179,7 @@
 
    <!-- hubing-videos -->
    <field name="frame_content" type="text_zh" indexed="true" stored="true" multiValued="false" />
-   <field name="frame_index" type="tint" indexed="true" stored="true" multiValued="true"/>
+   <field name="frame_index" type="tint" indexed="true" stored="true" multiValued="false"/>
    <field name="frame_cache_ip" type="string" indexed="true" stored="true" multiValued="false" />
    <field name="frame_url" type="string" indexed="false" stored="true" multiValued="false" />
    <field name="video_id" type="string" indexed="true" stored="true" multiValued="false"/>
